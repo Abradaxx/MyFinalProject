@@ -1,4 +1,6 @@
-﻿using Entities.Concrete;
+﻿using Core.DataAcces;
+using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +9,7 @@ namespace DataAccess.Abstract
 {
     public interface IProductDal:IEntityRepository<Product>
     {
-       
+        List<ProductDetailDto> GetProductDetails();
     }
 }
 /*Public koymayı unutma çünkü public erişimi saglar
@@ -20,3 +22,4 @@ namespace DataAccess.Abstract
  * 
  * 
  */
+//core ile yaptıgımız olay sonucu düzeltmelere code refactoring deniyor
